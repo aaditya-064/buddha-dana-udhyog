@@ -1,3 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Qwitcher+Grypen:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+.product_headline{
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.types_products{
+  font-family: "Julius Sans One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
