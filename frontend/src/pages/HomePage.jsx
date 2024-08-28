@@ -15,7 +15,7 @@ const HomePage = () => {
     setData({ ...data, [name]: value });
   };
   return (
-    <>
+    <div className="flex-1">
       <Navbar />
 
       {/* image portion */}
@@ -167,7 +167,7 @@ const HomePage = () => {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 
