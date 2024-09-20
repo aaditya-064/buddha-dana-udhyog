@@ -3,17 +3,27 @@ import Navbar from "../components/Navbar";
 import "../index.css";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
+import axios from "axios";
 
 const HomePage = () => {
-  const [data, setData] = useState({});
-  const handleSubmit = (e) => {
-    e.preventDefault;
+  const [info, setInfo] = useState({ email: "" });
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    await axios({
+      url: "http://127.0.0.1:8080/user/email",
+      method: "post",
+      data: info,
+    });
+    // console.log(data);
     alert(`we'll reach you soon`);
+    setInfo({ ...info, email: "" });
+    // console.log(info);
   };
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setData({ ...data, [name]: value });
+    setInfo({ ...info, [name]: value });
   };
+
   return (
     <div className="flex-1">
       <Navbar />
@@ -45,6 +55,7 @@ const HomePage = () => {
                 placeholder="Enter your Email Address..."
                 type="email"
                 name="email"
+                value={info.email}
                 onChange={(e) => {
                   handleChange(e);
                 }}
