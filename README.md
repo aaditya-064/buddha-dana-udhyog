@@ -1,1 +1,1 @@
-# buddha-dana-udhyog
+# BUDDHA DANA UDHYOG PVT. LTD.

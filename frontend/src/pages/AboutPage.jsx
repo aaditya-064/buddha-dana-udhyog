@@ -1,11 +1,11 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "../components/Layout/Header";
+import Footer from "../components/Layout/Footer";
+import Layout from "../components/Layout/Layout";
 
 const AboutPage = () => {
   return (
-    <div>
-      <Navbar />
+    <Layout>
       <div className="relative h-[600px] w-full">
         <img
           src="/factory.jpg"
@@ -75,8 +75,7 @@ const AboutPage = () => {
           <div className="flex mt-14"></div>
         </div>
       </div>
-      <Footer />
-    </div>
+    </Layout>
   );
 };
 

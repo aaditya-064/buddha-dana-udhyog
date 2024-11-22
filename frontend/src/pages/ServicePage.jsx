@@ -1,17 +1,13 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Layout from "../components/Layout/Layout";
 
 const ServicePage = () => {
   return (
-    <div>
-      <Navbar />
+    <Layout>
       <div className="mt-20">
         <p className="text-center font-bold text-3xl p-24">Our Services</p>
-
-        <Footer />
       </div>
-    </div>
+    </Layout>
   );
 };
 

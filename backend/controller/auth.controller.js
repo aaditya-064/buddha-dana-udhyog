@@ -6,7 +6,6 @@ import config from "../config/config.js";
 export const getUser = async (req, res) => {
   try {
     const findUser = await userModel.findOne({ email: req.body.email });
-    console.log(findUser);
     if (!findUser) {
       const err = new Error("USER NOT FOUND");
       err.statusCode = 404;

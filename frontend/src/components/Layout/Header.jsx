@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-export default function Navbar() {
+export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -11,7 +11,9 @@ export default function Navbar() {
 
   return (
     <div className="bg-red-900 p-3 flex justify-between md:justify-evenly items-center text-white fixed w-full top-0 z-10">
-      <img src="/buddha.png" className="w-[40px]" alt="Logo" />
+      <Link to={"/"}>
+        <img src="/buddha.png" className="w-[40px]" alt="Logo" />
+      </Link>
 
       {/* Hamburger Menu (shown on smaller screens) */}
       <div className="md:hidden">

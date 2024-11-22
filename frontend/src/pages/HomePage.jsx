@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "../components/Navbar";
 import "../index.css";
 import { Link } from "react-router-dom";
-import Footer from "../components/Footer";
 import axios from "axios";
+import Layout from "../components/Layout/Layout";
 
 const HomePage = () => {
   const [info, setInfo] = useState({ email: "" });
@@ -25,9 +24,7 @@ const HomePage = () => {
   };
 
   return (
-    <div className="flex-1">
-      <Navbar />
-
+    <Layout className="flex-1">
       {/* image portion */}
       <div className="relative h-[36rem] md:h-[40rem] overflow-hidden">
         <img
@@ -177,8 +174,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      <Footer />
-    </div>
+    </Layout>
   );
 };
 
